@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Eugen Juarez personal portfolio" />
     <title>Eugen Juarez | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="profile.jpg" as="image" type="image/jpeg" fetchpriority="high" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -25,7 +28,14 @@
         </div>
 
         <div class="portrait">
-          <img src="profile.png" alt="Portrait of Eugen Juarez" />
+          <img
+            src="profile.jpg"
+            alt="Portrait of Eugen Juarez"
+            width="780"
+            height="1170"
+            decoding="async"
+            fetchpriority="high"
+          />
         </div>
       </section>
 
