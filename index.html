@@ -75,8 +75,47 @@
             <address>Brgy. Consuelo, Ilog Negros Occidental</address>
           </div>
         </div>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+          </div>
+          <label>
+            <span>Subject</span>
+            <input type="text" name="subject" placeholder="How can I help?" required />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="6" placeholder="Write your message..." required></textarea>
+          </label>
+          <button class="submit-button" type="submit">
+            Send message <span aria-hidden="true">↗</span>
+          </button>
+        </form>
       </section>
 
     </main>
+    <script>
+      document.querySelector("#contact-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const form = new FormData(event.currentTarget);
+        const name = form.get("name").trim();
+        const email = form.get("email").trim();
+        const subject = form.get("subject").trim();
+        const message = form.get("message").trim();
+        const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+        const mailto = `mailto:eugenjuarez12@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        window.location.href = mailto;
+      });
+    </script>
   </body>
 </html>
