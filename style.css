@@ -223,10 +223,6 @@ a {
     justify-self: start;
   }
 
-  .project-list {
-    grid-template-columns: 1fr;
-    gap: 55px;
-  }
 }
 
 @media (max-width: 520px) {
@@ -247,32 +243,12 @@ a {
     height: 190px;
   }
 
-  .about,
-  .work,
-  .contact {
+  .about {
     padding-top: 70px;
     padding-bottom: 70px;
   }
 
-  .about h2,
-  .section-title h2,
-  .contact h2 {
+  .about h2 {
     font-size: 48px;
-  }
-
-  .section-title h2 {
-    text-align: right;
-  }
-
-  .project-preview {
-    height: 380px;
-  }
-
-  .preview-card strong {
-    font-size: 38px;
-  }
-
-  .project-info p {
-    display: none;
   }
 }
